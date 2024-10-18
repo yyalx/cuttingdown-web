@@ -1,9 +1,20 @@
+import { Content, Footer } from "antd/es/layout/layout";
+import "../global.css";
 const Page: React.FC = () => {
   return (
-    <div>
-      <h1>Blogs Page</h1>
-      <p>Learn more about us here!</p>
-    </div>
+    <>
+      <Content></Content>
+      <Footer className="fixed-footer">
+        <div>
+          <h1>Blogs Page</h1>
+          <p>function design:</p>
+          <ol>
+            <li>search function</li>
+            <li></li>
+          </ol>
+        </div>
+      </Footer>
+    </>
   );
 };
 

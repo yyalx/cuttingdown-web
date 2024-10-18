@@ -1,6 +1,8 @@
 import NavBar from "@/components/NavBar";
 import { Layout } from "antd";
 import type { Metadata } from "next";
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
 export const metadata: Metadata = {
   title: "Cutdown",

@@ -6,6 +6,7 @@ const JAVA_SERVICE_URL = "http://localhost:8080";
 
 // Middleware function to handle request forwarding
 export async function middleware(request: NextRequest) {
+  console.log("run into middleware");
   const {
     method,
     headers,
@@ -18,9 +19,9 @@ export async function middleware(request: NextRequest) {
       headers: headers,
       body: method === "POST" || method === "PUT" ? request.body : undefined,
     });
-    const text = await response.text();
-    console.log(response.status, text);
-    return NextResponse.json(text);
+    const json = await response.json();
+    console.log(response.status, json);
+    return NextResponse.json(json);
   } catch (e) {
     console.log(e);
     return null;
